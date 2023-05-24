@@ -1,9 +1,13 @@
 import './styled.css';
+import { PostsProvider } from '../../contexts/PostsProvider';
+import { Posts } from '../../components/Posts';
 
 export const App = () => {
   return (
-    <div className="App">
-      <h1>Oi</h1>
-    </div>
+    <PostsProvider>
+      <div>
+        <Posts />
+      </div>
+    </PostsProvider>
   );
 };
